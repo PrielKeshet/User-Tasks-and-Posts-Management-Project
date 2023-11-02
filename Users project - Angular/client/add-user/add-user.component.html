@@ -1,0 +1,14 @@
+<div id="wrapper">
+    <form #f="ngForm" (ngSubmit)="addUser()">
+
+        Name: <input #name="ngModel" type="text" required minlength="2" [(ngModel)]="Name" name="Name"> <br> <br>
+        <p class="error" *ngIf="!name.valid && name.touched">name invalid</p>
+
+        Email: <input #email="ngModel" type="text" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" [(ngModel)]="Email" name="Email"> <br><br>
+        <p class="error" *ngIf="!email.valid && email.touched">email invalid</p>
+
+        <button type="button" (click)="changeRoute()">cancel</button>
+        <input type="submit" [disabled]="!f.valid" value="add">
+
+    </form>
+    </div>

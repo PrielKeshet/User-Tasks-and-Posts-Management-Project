@@ -1,0 +1,9 @@
+#warpper{
+    border: 2px solid purple;
+
+}
+#inside{
+    margin: auto;
+    padding-left: 25px;
+    padding-top: 10px;
+}

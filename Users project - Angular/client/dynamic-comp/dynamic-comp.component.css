@@ -1,0 +1,19 @@
+.add{
+    border: 2px solid purple;
+    margin: auto;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+#showTasks{
+    overflow: auto;
+    height: 250px;
+}
+
+#showPosts{
+    overflow: auto;
+    height: 250px;
+}
+.error{
+    width: 15%;
+    background-color: red;
+}

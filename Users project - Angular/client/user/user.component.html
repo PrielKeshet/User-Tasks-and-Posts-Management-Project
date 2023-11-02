@@ -1,0 +1,33 @@
+<div id=mainData [style.border]="borderColorFlag? '2px solid green' : '2px solid red'" [style]="isSelected? 'background: #e07809;' : 'background: #fcfbfa;'" >
+    <form #f="ngForm" (ngSubmit)="UpdateUser()">
+        <br>
+        <p (click)="ChoosenUser()" for="ID">ID: {{user._id}}</p>
+        Name: <input #name="ngModel" type="text" required minlength="2" [(ngModel)]="Name" name="name">
+        <br>
+        <div class="error" *ngIf="!name.valid" >name is invalid</div> <br>
+        Email: <input #email="ngModel" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" type="text" [(ngModel)]="Email" name="email"> <br>
+        <div class="error" *ngIf="!email.valid" >email is invalid</div> <br>
+        <div style="background-color: rgb(188, 186, 186); width: 25%;" (mouseover)="flag=true" (click)="flag=false"
+            for="OtherData">Other Data</div>
+
+        <div *ngIf="flag">
+            <br>
+            Street: <input #street="ngModel" type="text" required minlength="2" [(ngModel)]="Street" name="Street"> <br>
+            <div class="error" *ngIf="!street.valid" >street is invalid</div> <br>
+            City: <input #city="ngModel" type="text" required minlength="2" [(ngModel)]="City" name="City"> <br>
+            <div class="error" *ngIf="!city.valid" >city is invalid</div> <br>
+            ZipCode: <input #zip="ngModel" required pattern="[0-9]{5}" type="text" [(ngModel)]="Zipcode" name="ZipCode"> <br>
+            <div class="error" *ngIf="!zip.valid" >zipcode is invalid</div> <br>
+
+        </div>
+
+        <button type="button" (click)="DeleteUser()">Delete</button>
+        <input id="submit" [disabled]="!f.valid" type="submit" value="Update">
+
+        <br> <br>
+
+
+
+    </form>
+</div>
+<br><br>

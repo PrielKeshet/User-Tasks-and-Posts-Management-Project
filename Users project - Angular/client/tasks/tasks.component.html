@@ -1,0 +1,9 @@
+<!-- לשנות את כל הקריאות במשימה בהתאם לקלאס -->
+<div id="warpper">
+    <div id="inside">
+Title: {{task.Title}} <br><br>
+completed? {{task.Completed}}
+<button *ngIf="!task.Completed" (click)="completed()">mark as completed</button>
+<br><br>
+</div>
+</div>

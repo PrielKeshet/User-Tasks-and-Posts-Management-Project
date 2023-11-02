@@ -1,0 +1,17 @@
+#mainData{
+
+    margin: 20px;
+    border-radius: 12px;
+}
+button{
+    float: right;
+    background-color: rgb(250, 220, 121);
+}
+#submit{
+    float: right;
+    background-color: rgb(250, 220, 121);
+}
+.error{
+    width: 20%;
+    background-color: red;
+}

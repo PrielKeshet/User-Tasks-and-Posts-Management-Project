@@ -1,0 +1,15 @@
+#warpper{
+    border: 2px solid purple;
+
+}
+#inside{
+    margin: auto;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+button{
+    float: right;
+  width: 150px;
+  padding: 10px;
+  align-items: flex-end;
+}

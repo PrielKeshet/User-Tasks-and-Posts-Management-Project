@@ -1,0 +1,47 @@
+<div id="upper">
+    <br>
+    Tasks:
+    <button (click)="changeTaskFlag()">add new task</button>
+    <div id="showTasks" *ngIf="taskFlag">
+
+        <app-tasks *ngFor="let t of tasks" [task]="t"></app-tasks>
+    </div>
+
+    <div id="addTask" class="add" *ngIf="!taskFlag">
+        <form #f="ngForm" (ngSubmit)="addTask()">
+            Add new Task: <br><br>
+            Title: <input #title="ngModel" required type="text" [(ngModel)]="newTask.Title" name="Title"> <br>
+            <p class="error" *ngIf="!title.valid && title.touched">title invalid</p>
+            <br>
+            <input type="submit" [disabled]="!f.valid" value="add">
+            <button type="button" (click)="changeTaskFlag()">cancel</button>
+        </form>
+    </div>
+
+</div>
+<br><br>
+<div id="downer">
+    posts:
+    <button (click)="changePostFlag()">add new post</button>
+    <div id="showPosts" *ngIf="postFlag">
+
+        <app-posts *ngFor="let p of posts" [post]="p"></app-posts>
+    </div>
+
+    <div id="addPost" class="add" *ngIf="!postFlag">
+        <form #f="ngForm" (ngSubmit)="addPost()">
+            Add new Post: <br><br>
+            Title: <input #title="ngModel" required type="text" [(ngModel)]="newPost.Title" name="title"> <br>
+            <p class="error" *ngIf="!title.valid && title.touched">title invalid</p><br>
+            Body: <input #body="ngModel" required type="text" [(ngModel)]="newPost.Body" name="body"> <br>
+            <p class="error" *ngIf="!body.valid && body.touched">body invalid</p><br>
+
+            <input type="submit" [disabled]="!f.valid" value="add">
+            <button type="button" (click)="changePostFlag()">cancel</button>
+        </form>
+    </div>
+
+
+
+
+</div>

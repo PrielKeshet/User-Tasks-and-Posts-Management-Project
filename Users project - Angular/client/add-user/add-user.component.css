@@ -1,0 +1,10 @@
+#wrapper{
+    border: 2px solid purple;
+    margin: auto;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+.error{
+    width: 15%;
+    background-color: red;
+}

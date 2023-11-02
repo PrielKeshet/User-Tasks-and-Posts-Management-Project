@@ -1,0 +1,19 @@
+<div id="wrapper">
+    <br>
+    <div id="center">
+        search <input (keyup)="SearchBy()" type="text" [(ngModel)]="search" name="search">
+        <button style="float: right;" (click)="OpenAddComp()">Add</button>
+    </div>
+
+    <br>
+
+    <div id="first">
+
+            <app-user *ngFor="let u of UsersCopy" [user]="u" ></app-user>
+
+    </div>
+
+    <div id="second">
+        <router-outlet></router-outlet>
+    </div>
+</div>

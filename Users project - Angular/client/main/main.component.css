@@ -1,0 +1,28 @@
+#wrapper {
+    overflow: auto;
+}
+
+#first {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 45%;
+    float: left;
+    border-radius: 12px;
+    border: 1px solid yellow;
+    overflow: auto;
+    height: 600px;
+}
+
+#second {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 45%;
+    overflow: auto;
+}
+#center{
+    margin: auto;
+    width: 40%;
+    border-radius: 12px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
